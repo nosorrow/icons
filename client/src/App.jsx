@@ -1,21 +1,25 @@
-import { useEffect, useState } from 'react';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import { Badge, Button } from "flowbite-react";
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [icons, setIcons] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/categories')
+    fetch("http://localhost:3001/api/categories")
       .then((res) => res.json())
-      .then(setCategories)
-      .catch(() => alert('Грешка при зареждане на категориите!'));
+      .then((data) => {
+        setCategories(data);
+      })
+      .catch(() => alert("Грешка при зареждане на категориите!"));
   }, []);
 
   const loadIcons = (category) => {
+    setIcons([]); // Изчистване на предишните икони
     setSelectedCategory(category);
     setLoading(true);
     fetch(`http://localhost:3001/api/icons/${category}`)
@@ -25,17 +29,20 @@ function App() {
         setLoading(false);
       })
       .catch(() => {
-        alert('Грешка при зареждане на иконите!');
+        alert("Грешка при зареждане на иконите!");
         setLoading(false);
       });
   };
 
   const copyToClipboard = (svg) => {
-    navigator.clipboard.writeText(svg).then(() => {
-      alert('SVG копирано в паметта!');
-    }, () => {
-      alert('Грешка при копиране!');
-    });
+    navigator.clipboard.writeText(svg).then(
+      () => {
+        alert("SVG копирано в паметта!");
+      },
+      () => {
+        alert("Грешка при копиране!");
+      }
+    );
   };
 
   const filteredIcons = icons.filter((icon) =>
@@ -44,16 +51,31 @@ function App() {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Icon Browser</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">
+
+        Icon Browser
+      </h1>
 
       <div className="flex flex-wrap justify-center gap-2 mb-6">
         {categories.map((category) => (
           <button
-            key={category}
-            onClick={() => loadIcons(category)}
-            className={`px-4 py-2 rounded ${category === selectedCategory ? 'bg-blue-600 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+            key={category.name}
+            onClick={() => loadIcons(category.name)}
+            className={`px-4 py-2 rounded ${
+              category.name === selectedCategory
+                ? "bg-blue-600 text-white"
+                : "bg-gray-200 hover:bg-gray-300"
+            }`}
           >
-            {category}
+            {category.name}
+            <Badge
+              color="purple"
+              className="ml-2 inline-flex"
+              size="xs"
+              style={{ fontSize: "0.75rem" }}
+            >
+              {category.count}
+            </Badge>
           </button>
         ))}
       </div>
@@ -75,14 +97,17 @@ function App() {
       <div className="grid grid-cols-2 md:grid-cols-8 gap-6 mt-12">
         {filteredIcons.map((icon) => (
           <div key={icon.name} className="py-4 flex flex-col items-center">
-            <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="icon" />
+            <div
+              dangerouslySetInnerHTML={{ __html: icon.svg }}
+              className="icon"
+            />
             <div className="text-sm mt-2 text-center">{icon.name}</div>
-            <button
+            <Button color="alternative"
               onClick={() => copyToClipboard(icon.svg)}
-              className="mt-2 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 text-center"
+              className="mt-2"
             >
               Copy
-            </button>
+            </Button>
           </div>
         ))}
       </div>

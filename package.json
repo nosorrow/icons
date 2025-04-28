@@ -1,0 +1,16 @@
+{
+  "name": "icon-project",
+  "version": "1.0.0",
+  "scripts": {
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "install-all": "npm-run-all --parallel client:install server:install",
+    "client:build": "cd client && npm run build",
+    "server:start": "cd server && node index.js",
+    "start": "npm run client:build && npm run server:start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
