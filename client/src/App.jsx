@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='text-red-500'>Icon Browser</h1>
+      <h1 className='text-slate-600 font-bold'>Icon Browser</h1>
 
       <div className="categories">
         {categories.map((category) => (
