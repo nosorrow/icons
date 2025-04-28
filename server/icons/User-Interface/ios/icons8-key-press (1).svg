@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="fluent" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M4,31
+	L4,31c-1.657,0-3-1.343-3-3V8c0-1.657,1.343-3,3-3h42c1.657,0,3,1.343,3,3v20c0,1.657-1.343,3-3,3h-8"/>
+<rect x="5" y="10" width="4" height="4"/>
+<rect x="11" y="10" width="4" height="4"/>
+<rect x="17" y="10" width="4" height="4"/>
+<rect x="23" y="10" width="4" height="4"/>
+<rect x="29" y="10" width="4" height="4"/>
+<rect x="35" y="10" width="4" height="4"/>
+<rect x="41" y="10" width="4" height="4"/>
+<polygon points="9,22 9,24.68 8.36,26 5,26 5,22 "/>
+<polygon points="45,22 45,26 39,26 39,22.47 39.23,22 "/>
+<rect x="5" y="16" width="7" height="4"/>
+<rect x="14" y="16" width="4" height="4"/>
+<rect x="20" y="16" width="4" height="4"/>
+<path d="M30,16v0.1c-0.23,0.3-0.43,0.62-0.6,0.97L27.97,20H26v-4H30z"/>
+<rect x="40" y="16" width="5" height="4"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M25.897,31.091l6.196-12.703
+	c0.605-1.241,2.102-1.756,3.343-1.151l0,0c1.241,0.605,1.756,2.102,1.151,3.343L26.445,41.372"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M21.403,28.899l1.911-3.917
+	c0.593-1.217,2.036-1.863,3.283-1.334c1.329,0.564,1.898,2.118,1.273,3.399l-1.973,4.045"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M16.032,28.505l1.911-3.917
+	c0.593-1.217,2.036-1.863,3.283-1.334c1.329,0.564,1.898,2.118,1.273,3.399l-1.096,2.247"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M29.514,35.08c0.877-1.798,2.652-3.157,4.45-2.28
+	c1.535,0.749,1.181,2.14,0.482,3.573l-2.63,5.393c-2.663,5.46-9.249,7.728-14.709,5.065l-5.393-2.63
+	c-3.955-1.929-5.612-6.743-3.683-10.697l4.103-8.411c0.593-1.217,2.036-1.863,3.283-1.334c1.329,0.564,1.898,2.118,1.273,3.399
+	l-0.658,1.348"/>
+</svg>

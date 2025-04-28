@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<path d="M26,16c0-4.971,4.029-9,9-9s9,4.029,9,9H26z"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="35" y1="7" x2="35" y2="5"/>
+<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	46,24 46,16 24,16 24,24 "/>
+<path d="M6,40.93V45c0,0.55-0.45,1-1,1s-1-0.45-1-1v-4.08C4.33,40.98,4.66,41,5,41S5.67,40.98,6,40.93z"/>
+<path d="M46,40.92V45c0,0.55-0.45,1-1,1s-1-0.45-1-1v-4.07c0.33,0.05,0.66,0.07,1,0.07S45.67,40.98,46,40.92z"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="4" y1="9" x2="19" y2="9"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M16.591,14C17.464,12.672,18,10.924,18,9H5c0,1.924,0.536,3.672,1.409,5H16.591z"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="4" y1="14" x2="19" y2="14"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M16.591,19C17.464,17.672,18,15.924,18,14H5c0,1.924,0.536,3.672,1.409,5H16.591z"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="4" y1="19" x2="19" y2="19"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M16.591,24C17.464,22.672,18,20.924,18,19H5c0,1.924,0.536,3.672,1.409,5H16.591z"/>
+<path d="M49,23H1c-0.553,0-1,0.447-1,1v10c0,2.757,2.243,5,5,5c1.641,0,3.088-0.806,4-2.031C9.912,38.194,11.359,39,13,39
+	s3.088-0.806,4-2.031C17.912,38.194,19.359,39,21,39s3.088-0.806,4-2.031C25.912,38.194,27.359,39,29,39s3.088-0.806,4-2.031
+	C33.912,38.194,35.359,39,37,39s3.088-0.806,4-2.031C41.912,38.194,43.359,39,45,39c2.757,0,5-2.243,5-5V24
+	C50,23.447,49.553,23,49,23z"/>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<g id="&#x421;&#x43B;&#x43E;&#x439;_1">
+	<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M19,12V3c0-1.105,0.895-2,2-2h8
+		c1.105,0,2,0.895,2,2v9"/>
+	<circle cx="17" cy="48" r="2"/>
+	<circle cx="33" cy="48" r="2"/>
+	<g>
+		<path d="M40,19v-3c0-2.757-2.243-5-5-5H15c-2.757,0-5,2.243-5,5v3H40z"/>
+		<path d="M10,38v3c0,2.757,2.243,5,5,5h20c2.757,0,5-2.243,5-5v-3H10z"/>
+	</g>
+	<rect x="19" y="1" width="12" height="3"/>
+</g>
+<g id="&#x421;&#x43B;&#x43E;&#x439;_2">
+</g>
+<g id="&#x421;&#x43B;&#x43E;&#x439;_3">
+	<path d="M10,21v15h30V21H10z M18.5,30c-1.381,0-2.5-1.119-2.5-2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5
+		C21,28.881,19.881,30,18.5,30z M29,33l-2-3l5-3l2,3L29,33z"/>
+</g>
+</svg>

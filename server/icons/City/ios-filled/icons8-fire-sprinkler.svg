@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<g id="filled">
+</g>
+<g id="outlined">
+</g>
+<g id="rounded">
+</g>
+<g id="two_x5F_tone">
+</g>
+<g id="sharp">
+</g>
+<g id="win10">
+</g>
+<g id="ios_x5F_out">
+</g>
+<g id="ios_x5F_filled">
+	<path d="M45,10H5c-0.552,0-1-0.448-1-1V7c0-0.552,0.448-1,1-1h40c0.552,0,1,0.448,1,1v2C46,9.552,45.552,10,45,10z"/>
+	<path d="M32,12v3c0,0.552-0.522,1-1.167,1H19.167C18.522,16,18,15.552,18,15v-3"/>
+	<circle cx="20" cy="28" r="1"/>
+	<circle cx="25" cy="28" r="1"/>
+	<circle cx="18" cy="32" r="1"/>
+	<circle cx="16" cy="36" r="1"/>
+	<circle cx="25" cy="32" r="1"/>
+	<circle cx="25" cy="36" r="1"/>
+	<circle cx="25" cy="40" r="1"/>
+	<circle cx="25" cy="44" r="1"/>
+	<circle cx="14" cy="40" r="1"/>
+	<circle cx="12" cy="44" r="1"/>
+	<circle cx="30" cy="28" r="1"/>
+	<circle cx="32" cy="32" r="1"/>
+	<circle cx="34" cy="36" r="1"/>
+	<circle cx="36" cy="40" r="1"/>
+	<circle cx="38" cy="44" r="1"/>
+	
+		<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="19" y1="24" x2="31" y2="24"/>
+	<line style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="25" y1="16" x2="25" y2="24"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;" points="29,15 29,20 
+		27,24 	"/>
+	<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;" points="23,24 21,20 
+		21,15 	"/>
+</g>
+<g id="color">
+</g>
+</svg>
