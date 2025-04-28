@@ -1,4 +1,3 @@
-// server/index.js
 import express from 'express';
 import cors from 'cors';
 import { promises as fs } from 'fs';
@@ -15,7 +14,7 @@ const ICONS_DIR = path.join(__dirname, 'icons');
 
 app.use(cors());
 
-// API за категориите
+// Списък на категориите
 app.get('/api/categories', async (req, res) => {
   try {
     const files = await fs.readdir(ICONS_DIR, { withFileTypes: true });
@@ -28,27 +27,24 @@ app.get('/api/categories', async (req, res) => {
   }
 });
 
-// API за иконите в категория
+// Списък на иконите
 app.get('/api/icons/:category', async (req, res) => {
   const categoryPath = path.join(ICONS_DIR, req.params.category);
   try {
-    const entries = await fs.readdir(categoryPath, { withFileTypes: true });
+    const subdirs = await fs.readdir(categoryPath, { withFileTypes: true });
     const icons = [];
 
-    for (const entry of entries) {
-      const entryPath = path.join(categoryPath, entry.name);
+    for (const subdir of subdirs) {
+      if (subdir.isDirectory()) {
+        const subdirPath = path.join(categoryPath, subdir.name);
+        const files = await fs.readdir(subdirPath);
 
-      if (entry.isFile() && entry.name.endsWith('.svg')) {
-        // SVG директно в категорията
-        const content = await fs.readFile(entryPath, 'utf8');
-        icons.push({ name: entry.name, svg: content });
-      } else if (entry.isDirectory()) {
-        // SVG в поддиректория
-        const files = await fs.readdir(entryPath);
+        console.log(categoryPath, subdirPath);
+
         for (const file of files) {
           if (file.endsWith('.svg')) {
-            const filePath = path.join(entryPath, file);
-            const content = await fs.readFile(filePath, 'utf8');
+            const fullPath = path.join(subdirPath, file);
+            const content = await fs.readFile(fullPath, 'utf8');
             icons.push({ name: file, svg: content });
           }
         }
@@ -60,6 +56,8 @@ app.get('/api/icons/:category', async (req, res) => {
     res.status(500).json({ error: 'Cannot read category directory' });
   }
 });
+
+// ТУК премахваме app.get('*') засега!
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

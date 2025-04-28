@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
+
 function App() {
   const [categories, setCategories] = useState([]);
   const [icons, setIcons] = useState([]);
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='text-slate-600 font-bold'>Icon Browser</h1>
+      <h1 className='text-red-500 text-2xl'>Icon Browser</h1>
 
       <div className="categories">
         {categories.map((category) => (
