@@ -1,12 +1,11 @@
-// client/src/App.jsx
 import { useEffect, useState } from 'react';
 import './App.css';
-
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [icons, setIcons] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -31,29 +30,59 @@ function App() {
       });
   };
 
-  return (
-    <div className="App">
-      <h1 className='text-red-500 text-2xl'>Icon Browser</h1>
+  const copyToClipboard = (svg) => {
+    navigator.clipboard.writeText(svg).then(() => {
+      alert('SVG копирано в паметта!');
+    }, () => {
+      alert('Грешка при копиране!');
+    });
+  };
 
-      <div className="categories">
+  const filteredIcons = icons.filter((icon) =>
+    icon.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6 text-center">Icon Browser</h1>
+
+      <div className="flex flex-wrap justify-center gap-2 mb-6">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => loadIcons(category)}
-            className={selectedCategory === category ? 'active' : ''}
+            className={`px-4 py-2 rounded ${category === selectedCategory ? 'bg-blue-600 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
           >
             {category}
           </button>
         ))}
       </div>
 
-      {loading && <div>Зареждане...</div>}
+      {selectedCategory && (
+        <div className="flex justify-center mb-6">
+          <input
+            type="text"
+            placeholder="Търси икона..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="input input-bordered w-full max-w-md px-4 py-2 border rounded-lg"
+          />
+        </div>
+      )}
 
-      <div className="icons">
-        {icons.map((icon) => (
-          <div key={icon.name} className="icon">
-            <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
-            <div className="icon-name">{icon.name}</div>
+      {loading && <div className="text-center text-xl">Зареждане...</div>}
+
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-6 mt-12">
+        {filteredIcons.map((icon) => (
+          <div key={icon.name} className="py-4 flex flex-col items-center">
+            <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="icon" />
+            <div className="text-sm mt-2 text-center">{icon.name}</div>
+            <button
+              onClick={() => copyToClipboard(icon.svg)}
+              className="mt-2 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-3 py-1 text-center"
+            >
+              Copy
+            </button>
           </div>
         ))}
       </div>

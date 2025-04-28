@@ -39,8 +39,6 @@ app.get('/api/icons/:category', async (req, res) => {
         const subdirPath = path.join(categoryPath, subdir.name);
         const files = await fs.readdir(subdirPath);
 
-        console.log(categoryPath, subdirPath);
-
         for (const file of files) {
           if (file.endsWith('.svg')) {
             const fullPath = path.join(subdirPath, file);
