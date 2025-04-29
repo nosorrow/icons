@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import history from 'connect-history-api-fallback';
 
 const app = express();
-const PORT = 3001;
+const PORT = 80;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
