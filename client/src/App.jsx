@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:80/api/categories")
+    fetch("http://ico-lib.opark.bg:3001/api/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -22,7 +22,7 @@ function App() {
     setIcons([]); // Изчистване на предишните икони
     setSelectedCategory(category);
     setLoading(true);
-    fetch(`http://localhost:80/api/icons/${category}`)
+    fetch(`http://ico-lib.opark.bg:3001/api/icons/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setIcons(data);
