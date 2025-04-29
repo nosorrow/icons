@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	35,49.73 35,46 29,46 29,49.73 "/>
+<g>
+	<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+		M14.259,35C15.526,42.53,21.467,48.463,29,49.73V46h6v3.73c7.533-1.268,13.474-7.2,14.741-14.73H45v-6h4.741
+		C48.474,21.47,42.533,15.537,35,14.27V19h-6v-4.73c-7.533,1.268-13.474,7.2-14.741,14.73H8.193C9.548,18.146,18.146,9.548,29,8.193
+		V2h6v6.193C45.854,9.548,54.452,18.146,55.807,29H62v6h-6.193C54.452,45.854,45.854,54.452,35,55.807V62h-6v-6.193
+		C18.146,54.452,9.548,45.854,8.193,35H2v-6"/>
+	<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+		M14.259,35H26c1.097,2.432,3.159,4,6,4c3.866,0,7-3.134,7-7s-3.134-7-7-7c-2.743,0-5.117,1.578-6.265,3.875"/>
+	
+		<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+		49.741,29 45,29 45,35 49.741,35 	"/>
+</g>
+</svg>

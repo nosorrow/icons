@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="domain">
+</g>
+<g id="wifi">
+</g>
+<g id="administrative_tools">
+	<path d="M31.97,51.38L31.46,58h-3.9c-0.88,0-1.66-0.58-1.91-1.43L24.89,54L31.97,51.38z"/>
+	<path d="M10.828,43.941l-1.279,2.352c-0.423,0.779-0.284,1.743,0.343,2.369l4.345,4.345l6.57-3.329l-2.121-2.121L10.828,43.941z"/>
+	<path d="M8,26.887l-2.567,0.759C4.583,27.897,4,28.678,4,29.564v6.145L11,38v-3L8,26.887z"/>
+	<path d="M18.059,12.828l-2.352-1.279c-0.779-0.423-1.743-0.284-2.369,0.343l-4.345,4.345l3.329,6.57l2.121-2.121L18.059,12.828z"/>
+	<path d="M35.113,10l-0.759-2.567C34.103,6.583,33.322,6,32.436,6h-6.145L24,13h3L35.113,10z"/>
+	<path d="M49.172,20.059l1.279-2.352c0.423-0.779,0.284-1.743-0.343-2.369l-4.345-4.345l-6.57,3.329l2.121,2.121L49.172,20.059z"/>
+	<path d="M52,37.113l2.567-0.759C55.417,36.103,56,35.322,56,34.436v-6.145L49,26v3L52,37.113z"/>
+	<path d="M30,20c-6.63,0-12,5.37-12,12s5.37,12,12,12c0.88,0,1.74-0.09,2.56-0.27L33,38h7.4c1.02-1.76,1.6-3.81,1.6-6
+		C42,25.37,36.63,20,30,20z M30,36c-2.21,0-4-1.79-4-4s1.79-4,4-4s4,1.79,4,4S32.21,36,30,36z"/>
+	<path d="M30,20c-6.63,0-12,5.37-12,12s5.37,12,12,12c0.88,0,1.74-0.09,2.56-0.27L33,38h7.4c1.02-1.76,1.6-3.81,1.6-6
+		C42,25.37,36.63,20,30,20z M30,36c-2.21,0-4-1.79-4-4s1.79-4,4-4s4,1.79,4,4S32.21,36,30,36z M30,20c-6.63,0-12,5.37-12,12
+		s5.37,12,12,12c0.88,0,1.74-0.09,2.56-0.27L33,38h7.4c1.02-1.76,1.6-3.81,1.6-6C42,25.37,36.63,20,30,20z M30,36
+		c-2.21,0-4-1.79-4-4s1.79-4,4-4s4,1.79,4,4S32.21,36,30,36z M30,11C18.4,11,9,20.4,9,32s9.4,21,21,21c0.62,0,1.24-0.03,1.85-0.09
+		l0.39-5.07C31.51,47.95,30.76,48,30,48c-8.84,0-16-7.16-16-16s7.16-16,16-16s16,7.16,16,16c0,2.12-0.41,4.15-1.17,6h5.3
+		C50.7,36.1,51,34.08,51,32C51,20.4,41.6,11,30,11z"/>
+	<path d="M35,40v24h29V40H35z M61,61H38V45h23V61z"/>
+	<polygon points="55.07,48.023 48.19,52.918 44.506,50.087 42.494,52.313 46.806,56.884 48.017,58.167 49.387,56.97 56.93,50.377 	
+		"/>
+</g>
+<g id="download_from_cloud">
+</g>
+<g id="data_in_both_directions">
+</g>
+<g id="upload_to_cloud">
+</g>
+<g id="network">
+</g>
+<g id="connection_sync">
+</g>
+<g id="connected">
+</g>
+<g id="disconnected">
+</g>
+<g id="bluetooth">
+</g>
+<g id="cloud_storage">
+</g>
+<g id="high_connection">
+</g>
+<g id="wifirouter">
+</g>
+<g id="networking_manager">
+</g>
+<g id="connection_status_off">
+</g>
+<g id="medium_connection">
+</g>
+<g id="wired_network">
+</g>
+<g id="wifi_off">
+</g>
+<g id="transfer_between_users">
+</g>
+<g id="no_connection">
+</g>
+<g id="cloud_checked">
+</g>
+<g id="ip_address">
+</g>
+<g id="connection_status_on">
+</g>
+<g id="broadcasting">
+</g>
+<g id="vpn">
+</g>
+<g id="upload_to_ftp">
+</g>
+<g id="low_connection">
+</g>
+<g id="outgoing_data">
+</g>
+<g id="remote_working">
+</g>
+<g id="wi_fi_connected">
+</g>
+<g id="multicast">
+</g>
+<g id="private_cloud_storage">
+</g>
+<g id="connected_people">
+</g>
+<g id="ftp">
+</g>
+<g id="individual_server">
+</g>
+<g id="torrent">
+</g>
+<g id="cloud_database">
+</g>
+<g id="wired_network_connection">
+</g>
+<g id="shared_folder">
+</g>
+<g id="database">
+</g>
+</svg>

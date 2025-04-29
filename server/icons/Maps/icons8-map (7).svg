@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="Layer_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
+	 xml:space="preserve">
+<polygon style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	49,25 49,27.31 29,38.86 19,36.55 11,27.31 1,25 1,22.69 21,11.14 31,13.45 39,22.69 "/>
+<polyline style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+	1,22.69 11,25 19,34.238 29,36.547 49,25 "/>
+<line style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="29" y1="36.547" x2="29" y2="38.86"/>
+<line style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="19" y1="34.238" x2="39" y2="22.69"/>
+<line style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="31" y1="13.45" x2="11" y2="25"/>
+<path d="M21,11.14l10,2.31l8,9.24L49,25v2.31L29,38.86l-10-2.31l-8-9.24L1,25v-2.31L21,11.14 M20.841,10.077L20.5,10.274l-20,11.55
+	L0,22.113v0.577V25v0.795l0.775,0.179l9.682,2.237l7.787,8.994l0.213,0.246l0.318,0.073l10,2.31l0.384,0.089l0.341-0.197l20-11.55
+	l0.5-0.289V27.31V25v-0.795l-0.775-0.179l-9.682-2.237l-7.787-8.994l-0.213-0.246l-0.318-0.073l-10-2.31L20.841,10.077
+	L20.841,10.077z"/>
+</svg>

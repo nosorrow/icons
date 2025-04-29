@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M7.888,39.048C11.936,36.564,18.1,35,25,35
+	c6.808,0,12.88,1.564,17.02,3.956"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M42.112,10.952C38.064,13.436,31.9,15,25,15
+	c-6.808,0-12.88-1.564-17.02-3.956"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="29" y1="25" x2="47.08" y2="25"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="2" y1="25" x2="25" y2="25"/>
+<polyline style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="19,19 25,25 19,31 "/>
+<g>
+	<polygon points="26,21.758 26,2.92 24,2.92 24,19.758 	"/>
+	<polygon points="24,30.242 24,47.08 26,47.08 26,28.242 	"/>
+</g>
+<path d="M25,1.92C13.291,1.92,3.597,10.687,2.121,22h2.027C5.33,13.762,11.285,7.052,19.12,4.771
+	C15.846,8.214,13.548,14.493,13.06,22h2.019C15.798,11.936,20.043,3.92,25,3.92c5.442,0,10.04,9.653,10.04,21.08
+	S30.442,46.08,25,46.08c-4.957,0-9.202-8.017-9.921-18.08H13.06c0.488,7.507,2.786,13.786,6.06,17.229
+	C11.285,42.948,5.33,36.238,4.148,28H2.121C3.597,39.313,13.291,48.08,25,48.08c12.727,0,23.08-10.354,23.08-23.08
+	S37.727,1.92,25,1.92z M30.88,45.229c3.702-3.894,6.16-11.408,6.16-20.229S34.582,8.664,30.88,4.771
+	C39.649,7.324,46.08,15.418,46.08,25S39.649,42.676,30.88,45.229z"/>
+</svg>
