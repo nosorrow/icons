@@ -131,7 +131,7 @@ function App() {
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
           <div className="grid grid-cols-2 lg:grid-cols-10 gap-6 mt-12">
             {filteredIcons.map((icon) => (
-              <div key={icon.name} 
+              <div key={icon.key} 
                 className="py-4 flex flex-col items-center border border-gray-100 rounded-2xl"
                 >
                 <div
