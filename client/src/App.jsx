@@ -128,18 +128,20 @@ function App() {
           {loading && <div className="text-center text-xl">Зареждане...</div>}
         </div>
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12 border border-green-500 sm:border-red-200">
+          <div className="grid grid-cols-2 lg:grid-cols-10 gap-6 mt-12">
             {filteredIcons.map((icon) => (
-              <div key={icon.name} className="py-4 flex flex-col items-center">
+              <div key={icon.name} 
+                className="py-4 flex flex-col items-center border border-gray-100 rounded-2xl"
+                >
                 <div
                   dangerouslySetInnerHTML={{ __html: icon.svg }}
                   className="icon"
                 />
-                <div className="text-sm mt-2 text-center">{icon.name}</div>
+                <div className="text-sm mt-2 text-center text-xs">{icon.name}</div>
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
-                  className="mt-2"
+                  className="mt-2 text-xs"
                 >
                   Copy
                 </Button>

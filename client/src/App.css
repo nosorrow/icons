@@ -1,14 +1,13 @@
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
-@import "flowbite";
+/* @import "flowbite"; */
 
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
+
 
 /* client/src/App.css */
 .App {
-  /* padding: 20px; */
+  padding: 20px;
   font-family: Arial, sans-serif;
 }
 
