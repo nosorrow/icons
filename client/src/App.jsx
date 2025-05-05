@@ -138,7 +138,7 @@ function App() {
                   dangerouslySetInnerHTML={{ __html: icon.svg }}
                   className="icon"
                 />
-                <div className="text-sm mt-2 text-center text-xs">{icon.name}</div>
+                <div className="mt-2 text-center text-xs">{icon.name}</div>
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
