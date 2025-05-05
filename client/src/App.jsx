@@ -9,8 +9,10 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const url = "http://localhost:3000";
+
   useEffect(() => {
-    fetch("http://ico-lib.opark.bg:3001/api/categories")
+    fetch(`${url}/api/categories`)
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -22,7 +24,7 @@ function App() {
     setIcons([]); // Изчистване на предишните икони
     setSelectedCategory(category);
     setLoading(true);
-    fetch(`http://ico-lib.opark.bg:3001/api/icons/${category}`)
+    fetch(`${url}/api/icons/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setIcons(data);

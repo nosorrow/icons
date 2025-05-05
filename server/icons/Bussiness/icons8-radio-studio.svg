@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="basic" id="Layer_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
+	 xml:space="preserve">
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+	M12,24.852C12,32.113,17.82,38,25,38s13-5.887,13-13.148"/>
+<polygon points="27,38 26,38 24,38 23,38 22,38 22,46 28,46 28,38 "/>
+<path d="M32,44H18c-2.206,0-4,1.794-4,4v1h22v-1C36,45.794,34.206,44,32,44z"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M5.98,3.415
+	C3.519,5.921,2,9.287,2,13c0,3.659,1.477,6.98,3.875,9.475"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M11,6.647
+	C9.307,8.275,8.26,10.52,8.26,13c0,2.426,1.006,4.624,2.635,6.242"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M44.02,22.475
+	c2.462-2.506,3.98-5.872,3.98-9.585c0-3.659-1.477-6.98-3.875-9.475"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M39,19.242
+	c1.693-1.628,2.74-3.873,2.74-6.353c0-2.426-1.006-4.624-2.635-6.242"/>
+<path d="M28.999,25c-0.553,0-1-0.449-0.999-1.001C28.001,23.447,28.448,23,29,23h0.001L35,23.008v-2.985l-6.001-0.008
+	c-0.553-0.001-1-0.449-0.999-1.001c0.001-0.552,0.448-0.999,1-0.999h0.001L35,18.023v-3.015L28.999,15c-0.553,0-1-0.449-0.999-1.001
+	C28.001,13.447,28.448,13,29,13h0.001L35,13.008V13c0-5.514-4.486-10-10-10c-5.514,0-10,4.486-10,10v0.005l6.002,0.01
+	c0.552,0.001,0.999,0.449,0.998,1.002c-0.001,0.551-0.449,0.998-1,0.998c0,0-0.001,0-0.002,0L15,15.005v3.015l6.002,0.011
+	c0.552,0.001,0.999,0.45,0.998,1.002c-0.001,0.551-0.449,0.998-1,0.998c0,0-0.001,0-0.002,0L15,20.02v2.985l6.002,0.01
+	c0.552,0.001,0.999,0.449,0.998,1.002c-0.001,0.551-0.449,0.998-1,0.998c0,0-0.001,0-0.002,0L15,25.005
+	C15.003,30.516,19.488,35,25,35c5.511,0,9.995-4.482,10-9.992L28.999,25z"/>
+</svg>

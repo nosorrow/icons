@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<path d="M32.684,31.333l-6.146,1.005l-5.513-3.713c-0.604-0.413-1.475-0.688-1.95-0.614l-0.901,0.148
+	c-0.267,0.042-0.307,0.328,0.247,0.888l3.603,4.051c-3.019,0.487-5.542,0.91-5.73,0.941c-0.485,0.074-0.732-0.243-1.059-0.688
+	c-0.554-0.751-1.376-1.851-1.623-2.211c-0.396-0.561-1.732-0.666-1.603,0.264c0.139,0.92,0.554,3.818,0.713,4.908
+	c0.228,1.608,3.444,2.189,9.541,1.195l7.255-1.248c4.473-0.814,8.581-1.745,8.482-2.465C37.83,32.677,35.851,30.815,32.684,31.333z"
+	/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M11,21.297
+	C11.825,22.327,13.078,23,14.5,23s2.675-0.673,3.5-1.703"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M39,21.297
+	C39.824,22.327,41.078,23,42.5,23c2.485,0,3.5-2.015,3.5-4.5S45,11,45,11H5c0,0-1,5.015-1,7.5S5.015,23,7.5,23
+	c1.422,0,2.675-0.673,3.5-1.703"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M32,21.297
+	C32.824,22.327,34.078,23,35.5,23s2.676-0.673,3.5-1.703"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M25,21.297
+	C25.825,22.327,27.078,23,28.5,23s2.676-0.673,3.5-1.703"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" d="M18,21.297
+	C18.825,22.327,20.078,23,21.5,23s2.675-0.673,3.5-1.703"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="39" y1="21.25" x2="39" y2="11.25"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="32" y1="21.25" x2="32" y2="11"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="25" y1="21.25" x2="25" y2="11"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="18" y1="21.25" x2="18" y2="11"/>
+<line style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="11" y1="21.25" x2="11" y2="11"/>
+<circle cx="8" cy="8" r="1"/>
+<circle cx="11" cy="8" r="1"/>
+<circle cx="14" cy="8" r="1"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M5,11V7c0-1.105,0.895-2,2-2h36
+	c1.105,0,2,0.895,2,2v4H5z"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M45,22v21c0,1.105-0.895,2-2,2H7
+	c-1.105,0-2-0.895-2-2V22"/>
+</svg>

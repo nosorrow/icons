@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import history from 'connect-history-api-fallback';
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,6 +20,8 @@ app.use(cors());
 app.get('/api/categories', async (req, res) => {
   try {
     const entries = await fs.readdir(ICONS_DIR, { withFileTypes: true });
+
+    console.log(ICONS_DIR);
 
     const categoriesPromises = entries
       .filter((dirent) => dirent.isDirectory())
