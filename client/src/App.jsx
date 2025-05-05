@@ -12,7 +12,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // const url = "https://ico-lib.opark.bg/";
+  // const url = "https://ico-lib.opark.bg";
   const url = "http://localhost:3000";
 
   useEffect(() => {
