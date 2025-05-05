@@ -1,21 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Badge, Button, cardTheme } from "flowbite-react";
-import {
-  Sidebar,
-  SidebarItem,
-  SidebarItemGroup,
-  SidebarItems,
-} from "flowbite-react";
-import {
-  HiArrowSmRight,
-  HiChartPie,
-  HiInbox,
-  HiShoppingBag,
-  HiTable,
-  HiUser,
-  HiViewBoards,
-} from "react-icons/hi";
+
 import { CiFolderOn } from "react-icons/ci";
 import "flowbite";
 
@@ -86,8 +72,8 @@ function App() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            clip-rule="evenodd"
-            fill-rule="evenodd"
+            clipRule="evenodd"
+            fillRule="evenodd"
             d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
           ></path>
         </svg>
@@ -100,94 +86,65 @@ function App() {
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <ul className="space-y-2 font-medium">
             {categories.map((category) => (
-              <>
-                <li>
+             
+                <li  key={category.name}>
                   <a
                     href="#"
-                    key={category.name}
                     onClick={() => loadIcons(category.name)}
                     className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group
                      ${
                        category.name === selectedCategory
-                         ? "bg-blue-600 text-white"
+                         ? "bg-red-50 text-black border-2 border-red-400"
                          : ""
                      }`}
                   >
                     <CiFolderOn />
                     <span className="flex-1 ms-3 whitespace-nowrap">
-                      { category.name}
+                      {category.name}
                     </span>
                     <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                       {category.count}
                     </span>
                   </a>
                 </li>
-              </>
             ))}
           </ul>
         </div>
       </aside>
 
       <div className="p-4 sm:ml-64">
+        <div>
+          {selectedCategory && (
+            <div className="flex justify-center mb-6">
+              <input
+                type="text"
+                placeholder="Търси икона..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="input input-bordered w-full max-w-md px-4 py-2 border rounded-lg"
+              />
+            </div>
+          )}
+          {loading && <div className="text-center text-xl">Зареждане...</div>}
+        </div>
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-        <div className="grid grid-cols-3 gap-4 mb-4">
-            <div className="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
+          <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 mt-12 border border-green-500 sm:border-red-200">
+            {filteredIcons.map((icon) => (
+              <div key={icon.name} className="py-4 flex flex-col items-center">
+                <div
+                  dangerouslySetInnerHTML={{ __html: icon.svg }}
+                  className="icon"
+                />
+                <div className="text-sm mt-2 text-center">{icon.name}</div>
+                <Button
+                  color="alternative"
+                  onClick={() => copyToClipboard(icon.svg)}
+                  className="mt-2"
                 >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
-            <div className="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
-            <div className="flex items-center justify-center h-24 rounded-sm bg-gray-50 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-              </p>
-            </div>
+                  Copy
+                </Button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
