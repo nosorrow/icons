@@ -14,8 +14,8 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // const url = "https://ico-lib.opark.bg";
-  const url = "http://localhost:3000";
+  const url = "https://ico-lib.opark.bg";
+  // const url = "http://localhost:3000";
 
   useEffect(() => {
     fetch(`${url}/api/categories`)
@@ -130,7 +130,7 @@ function App() {
                   <span className="flex-1 ms-3 whitespace-nowrap">
                     {category.name}
                   </span>
-                  <span className="inline-flex items-center justify-center min-w-3 h-3 p-3 ms-3 text-sm font-medium text-indigo-800 bg-indigo-100 rounded-full dark:bg-indigo-900 dark:text-indigo-300">
+                  <span className="inline-flex items-center justify-center min-w-3 h-3 p-2 ms-3 text-xs font-medium text-pink-800 bg-pink-100 rounded-full dark:bg-pink-900 dark:text-pink-300">
                     {category.count}
                   </span>
                 </a>
