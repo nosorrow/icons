@@ -70,7 +70,7 @@ app.get("/api/icons/:category", async (req, res) => {
 
       if (entry.isFile() && entry.name.endsWith(".svg")) {
         const content = await fs.readFile(entryPath, "utf8");
-        const cleanedName = entry.name.replace(/^icons8-/, ""); // Премахва "icons8-" от началото на името
+        const cleanedName = entry.name.replace(/^icons8-/, "").replace(/\.svg$/, ""); // Премахва "icons8-" от началото на името
         return [{ name: cleanedName, svg: content, key: cleanedName }];
       }
 
@@ -81,7 +81,7 @@ app.get("/api/icons/:category", async (req, res) => {
           .map(async (file) => {
             const filePath = path.join(entryPath, file);
             const content = await fs.readFile(filePath, "utf8");
-            const cleanedName = file.replace(/^icons8-/, "");
+            const cleanedName = file.replace(/^icons8-/, "").replace(/\.svg$/, "");
             return { name: cleanedName, svg: content, key: `${entry.name}-${cleanedName}` };
           });
 

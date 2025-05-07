@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import SidebarLogo from "./components/sidebar-logo";
 import { Badge, Button, cardTheme } from "flowbite-react";
-import { FaRegFolder, FaRegFolderOpen } from "react-icons/fa";
+import { FaRegFolder, FaRegFolderOpen, FaRegCopy } from "react-icons/fa";
 import "flowbite";
 
 function App() {
@@ -148,9 +148,9 @@ function App() {
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
-                  className="mt-2 text-xs"
+                  className="mt-2"
                 >
-                  Copy
+                  <FaRegCopy />
                 </Button>
               </div>
             ))}
