@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import SidebarLogo from "./components/sidebar-logo";
-import { Badge, Button } from "flowbite-react";
+import { Badge, Button, cardTheme } from "flowbite-react";
 import { FaRegFolder, FaRegFolderOpen, FaRegCopy } from "react-icons/fa";
+import "flowbite";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,9 +13,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const url = "https://ico-lib.opark.bg";
+  // const url = "http://localhost:3000";
 
   useEffect(() => {
     fetch(`${url}/api/categories`)
@@ -26,7 +27,7 @@ function App() {
   }, []);
 
   const loadIcons = (category) => {
-    setIcons([]);
+    setIcons([]); // Изчистване на предишните икони
     setSelectedCategory(category);
     setLoading(true);
     fetch(`${url}/api/icons/${category}`)
@@ -39,16 +40,12 @@ function App() {
         toast.error("Грешка при зареждане на иконите!");
         setLoading(false);
       });
-
-    // Затваряме sidebar-a на мобилни устройства
-    if (window.innerWidth < 640) {
-      setSidebarOpen(false);
-    }
   };
 
   const copyToClipboard = (svg) => {
     navigator.clipboard.writeText(svg).then(
       () => {
+        // alert("SVG копирано в паметта!");
         toast.success("SVG копирано в паметта!", {
           position: "top-right",
           autoClose: 3000,
@@ -83,7 +80,9 @@ function App() {
         pauseOnHover
       />
       <button
-        onClick={() => setSidebarOpen(!sidebarOpen)}
+        data-drawer-target="default-sidebar"
+        data-drawer-toggle="default-sidebar"
+        aria-controls="default-sidebar"
         type="button"
         className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
@@ -104,7 +103,7 @@ function App() {
       </button>
       <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-72 h-screen transition-transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0`}
+        className="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -118,10 +117,7 @@ function App() {
               <li key={category.name}>
                 <a
                   href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    loadIcons(category.name);
-                  }}
+                  onClick={() => loadIcons(category.name)}
                   className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group
                      ${
                        category.name === selectedCategory
