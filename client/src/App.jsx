@@ -4,6 +4,8 @@ import SidebarLogo from "./components/sidebar-logo";
 import { Badge, Button, cardTheme } from "flowbite-react";
 import { FaRegFolder, FaRegFolderOpen, FaRegCopy } from "react-icons/fa";
 import "flowbite";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -21,7 +23,7 @@ function App() {
       .then((data) => {
         setCategories(data);
       })
-      .catch(() => alert("Грешка при зареждане на категориите!"));
+      .catch(() => toast.error("Грешка при зареждане на категориите!"));
   }, []);
 
   const loadIcons = (category) => {
@@ -35,7 +37,7 @@ function App() {
         setLoading(false);
       })
       .catch(() => {
-        alert("Грешка при зареждане на иконите!");
+        toast.error("Грешка при зареждане на иконите!");
         setLoading(false);
       });
   };
@@ -43,10 +45,19 @@ function App() {
   const copyToClipboard = (svg) => {
     navigator.clipboard.writeText(svg).then(
       () => {
-        alert("SVG копирано в паметта!");
+        // alert("SVG копирано в паметта!");
+        toast.success("SVG копирано в паметта!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       },
       () => {
-        alert("Грешка при копиране!");
+        toast.error("Грешка при копиране!");
       }
     );
   };
@@ -57,6 +68,17 @@ function App() {
 
   return (
     <div className="w-full">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <button
         data-drawer-target="default-sidebar"
         data-drawer-toggle="default-sidebar"
@@ -134,23 +156,23 @@ function App() {
           {loading && <div className="text-center text-xl">Зареждане...</div>}
         </div>
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div className="grid grid-cols-2 lg:grid-cols-10 gap-6 mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-8 gap-6 mt-12">
             {filteredIcons.map((icon) => (
               <div
                 key={icon.key}
-                className="py-4 flex flex-col items-center border border-gray-100 rounded-2xl"
+                className="relative px-6 py-4 flex flex-col items-center border border-gray-100 rounded-2xl"
               >
                 <div
-                  dangerouslySetInnerHTML={{ __html: icon.svg }}
-                  className="icon"
-                />
-                <div className="mt-2 text-center text-xs">{icon.name}</div>
+                    dangerouslySetInnerHTML={{ __html: icon.svg }}
+                    className="icon"
+                  />
+                  <div className="mt-2 text-center text-xs">{icon.name}</div>
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
-                  className="mt-2"
+                  className="mt-2 text-xs"
                 >
-                  <FaRegCopy />
+                  <FaRegCopy className="mr-2" /> Copy
                 </Button>
               </div>
             ))}
