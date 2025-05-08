@@ -3,9 +3,9 @@ import "./App.css";
 // import SidebarLogo from "./components/sidebar-logo";
 import Sidebar from "./components/sidebar";
 import { Badge, Button } from "flowbite-react";
-import { FaRegFolder, FaRegFolderOpen, FaRegCopy } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { FaRegCopy } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -15,7 +15,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const url = "https://ico-lib.opark.bg";
+  // const url = "https://ico-lib.opark.bg";
+  const url = "http://localhost:3000";
 
   useEffect(() => {
     fetch(`${url}/api/categories`)
@@ -173,10 +174,10 @@ function App() {
                 className="relative px-6 py-4 flex flex-col items-center border border-gray-100 rounded-2xl"
               >
                 <div
-                    dangerouslySetInnerHTML={{ __html: icon.svg }}
-                    className="icon"
-                  />
-                  <div className="mt-2 text-center text-xs">{icon.name}</div>
+                  dangerouslySetInnerHTML={{ __html: icon.svg }}
+                  className="icon"
+                />
+                <div className="mt-2 text-center text-xs">{icon.name}</div>
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
