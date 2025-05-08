@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import SidebarLogo from "./components/sidebar-logo";
+// import SidebarLogo from "./components/sidebar-logo";
+import Sidebar from "./components/sidebar";
 import { Badge, Button } from "flowbite-react";
 import { FaRegFolder, FaRegFolderOpen, FaRegCopy } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
@@ -102,7 +103,7 @@ function App() {
           ></path>
         </svg>
       </button>
-      <aside
+      {/* <aside
         id="default-sidebar"
         className={`fixed top-0 left-0 z-40 w-72 h-screen transition-transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} sm:translate-x-0`}
         aria-label="Sidebar"
@@ -142,8 +143,13 @@ function App() {
             ))}
           </ul>
         </div>
-      </aside>
-
+      </aside> */}
+      <Sidebar
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategorySelect={loadIcons}
+        sidebarOpen={sidebarOpen}
+      />
       <div className="p-4 sm:ml-72">
         <div>
           {selectedCategory && (
