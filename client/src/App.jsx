@@ -181,7 +181,7 @@ function App() {
                 <Button
                   color="alternative"
                   onClick={() => copyToClipboard(icon.svg)}
-                  className="mt-2 text-xs"
+                  className="mt-2 text-xs dark:bg-white dark:text-black transition-all duration-300"
                 >
                   <FaRegCopy className="mr-2" /> Copy
                 </Button>
