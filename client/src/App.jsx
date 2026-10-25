@@ -60,7 +60,7 @@ function App() {
   const copyToClipboard = (svg) => {
     navigator.clipboard.writeText(svg).then(
       () => {
-        toast.success("SVG РєРѕРїРёСЂР°РЅРѕ РІ РїР°РјРµС‚С‚Р°!", {
+        toast.success("SVG е копирано в паметта!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -71,7 +71,7 @@ function App() {
         });
       },
       () => {
-        toast.error("Р“СЂРµС€РєР° РїСЂРё РєРѕРїРёСЂР°РЅРµ!");
+        toast.error("Грешка при копиране!");
       }
     );
   };
@@ -166,14 +166,14 @@ function App() {
             <div className="flex justify-center mb-6">
               <input
                 type="text"
-                placeholder="РўСЉСЂСЃРё РёРєРѕРЅР°..."
+                placeholder="Търси икона..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="input input-bordered w-full max-w-md px-4 py-2 border rounded-lg"
               />
             </div>
           )}
-          {loading && <div className="text-center text-xl">Р—Р°СЂРµР¶РґР°РЅРµ...</div>}
+          {loading && <div className="text-center text-xl">Зареждане...</div>}
         </div>
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
           <div className="grid grid-cols-2 lg:grid-cols-8 gap-6 mt-12">
