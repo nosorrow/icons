@@ -15,8 +15,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // const url = "https://ico-lib.opark.bg";
-  const url = "http://localhost:3000";
+  // API is served by the same Express host as the frontend in production.
+  const url = "";
 
   useEffect(() => {
     fetch(`${url}/api/categories`)
