@@ -1,4 +1,4 @@
-// server/index.js
+﻿// server/index.js
 import express from "express";
 import cors from "cors";
 import { promises as fs } from "fs";
@@ -16,7 +16,7 @@ const ICONS_DIR = path.join(__dirname, "icons");
 
 app.use(cors());
 
-// API за категориите
+// API Р·Р° РєР°С‚РµРіРѕСЂРёРёС‚Рµ
 app.get("/api/categories", async (req, res) => {
   try {
     const entries = await fs.readdir(ICONS_DIR, { withFileTypes: true });
@@ -58,52 +58,57 @@ app.get("/api/categories", async (req, res) => {
   }
 });
 
-// API за иконите в категория
+// API Р·Р° РёРєРѕРЅРёС‚Рµ РІ РєР°С‚РµРіРѕСЂРёСЏ
 app.get("/api/icons/:category", async (req, res) => {
   const categoryPath = path.join(ICONS_DIR, req.params.category);
 
   try {
     const entries = await fs.readdir(categoryPath, { withFileTypes: true });
+    const iconFiles = [];
 
-    const iconsPromises = entries.map(async (entry) => {
+    for (const entry of entries) {
       const entryPath = path.join(categoryPath, entry.name);
 
       if (entry.isFile() && entry.name.endsWith(".svg")) {
-        const content = await fs.readFile(entryPath, "utf8");
-        const cleanedName = entry.name.replace(/^icons8-/, "").replace(/\.svg$/, ""); // Премахва "icons8-" от началото на името
-        return [{ name: cleanedName, fileName: entry.name, svg: content, key: cleanedName }];
+        iconFiles.push({ filePath: entryPath, fileName: entry.name, style: "" });
+      } else if (entry.isDirectory()) {
+        const files = await fs.readdir(entryPath, { withFileTypes: true });
+        for (const file of files) {
+          if (file.isFile() && file.name.endsWith(".svg")) {
+            iconFiles.push({
+              filePath: path.join(entryPath, file.name),
+              fileName: file.name,
+              style: entry.name,
+            });
+          }
+        }
       }
+    }
 
-      if (entry.isDirectory()) {
-        const files = await fs.readdir(entryPath);
-        const svgFiles = files
-          .filter((file) => file.endsWith(".svg"))
-          .map(async (file) => {
-            const filePath = path.join(entryPath, file);
-            const content = await fs.readFile(filePath, "utf8");
-            const cleanedName = file.replace(/^icons8-/, "").replace(/\.svg$/, "");
-            return { name: cleanedName, fileName: file, svg: content, key: `${entry.name}-${cleanedName}` };
-          });
-
-        return Promise.all(svgFiles);
-      }
-
-      return []; // Ако не е файл/директория — празен списък
-    });
-
-    const iconsArrays = await Promise.all(iconsPromises);
-    const icons = iconsArrays.flat();
+    // Bound concurrent reads so large collections do not exhaust file descriptors.
+    const icons = [];
+    const concurrency = 64;
+    for (let i = 0; i < iconFiles.length; i += concurrency) {
+      const batch = iconFiles.slice(i, i + concurrency);
+      const batchIcons = await Promise.all(batch.map(async ({ filePath, fileName, style }) => {
+        const content = await fs.readFile(filePath, "utf8");
+        const cleanedName = fileName.replace(/^icons8-/, "").replace(/\.svg$/, "");
+        const key = style ? `${style}-${cleanedName}` : cleanedName;
+        return { name: cleanedName, fileName, svg: content, key };
+      }));
+      icons.push(...batchIcons);
+    }
 
     res.json(icons);
   } catch (error) {
+    console.error(`Failed to read icons for category "${req.params.category}":`, error);
     res.status(500).json({ error: "Cannot read category directory" });
   }
 });
-
-// // Статични файлове (React build)
+// // РЎС‚Р°С‚РёС‡РЅРё С„Р°Р№Р»РѕРІРµ (React build)
 // app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// // Catch-all route (последен)
+// // Catch-all route (РїРѕСЃР»РµРґРµРЅ)
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
 // });

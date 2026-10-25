@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import "./App.css";
 // import SidebarLogo from "./components/sidebar-logo";
 import Sidebar from "./components/sidebar";
@@ -20,38 +20,47 @@ function App() {
 
   useEffect(() => {
     fetch(`${url}/api/categories`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
+        if (!Array.isArray(data)) throw new Error(data?.error || "Invalid categories response");
         setCategories(data);
       })
-      .catch(() => toast.error("Грешка при зареждане на категориите!"));
+      .catch((error) => {
+        console.error("Failed to load categories:", error);
+        toast.error("Грешка при зареждане на категориите!");
+      });
   }, []);
 
   const loadIcons = (category) => {
     setIcons([]);
     setSelectedCategory(category);
     setLoading(true);
-    fetch(`${url}/api/icons/${category}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setIcons(data);
-        setLoading(false);
+    fetch(`${url}/api/icons/${encodeURIComponent(category)}`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
       })
-      .catch(() => {
+      .then((data) => {
+        if (!Array.isArray(data)) throw new Error(data?.error || "Invalid icons response");
+        setIcons(data);
+      })
+      .catch((error) => {
+        console.error("Failed to load icons:", error);
         toast.error("Грешка при зареждане на иконите!");
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
 
-    // Затваряме sidebar-a на мобилни устройства
     if (window.innerWidth < 640) {
       setSidebarOpen(false);
     }
   };
-
   const copyToClipboard = (svg) => {
     navigator.clipboard.writeText(svg).then(
       () => {
-        toast.success("SVG копирано в паметта!", {
+        toast.success("SVG РєРѕРїРёСЂР°РЅРѕ РІ РїР°РјРµС‚С‚Р°!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -62,7 +71,7 @@ function App() {
         });
       },
       () => {
-        toast.error("Грешка при копиране!");
+        toast.error("Р“СЂРµС€РєР° РїСЂРё РєРѕРїРёСЂР°РЅРµ!");
       }
     );
   };
@@ -157,14 +166,14 @@ function App() {
             <div className="flex justify-center mb-6">
               <input
                 type="text"
-                placeholder="Търси икона..."
+                placeholder="РўСЉСЂСЃРё РёРєРѕРЅР°..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="input input-bordered w-full max-w-md px-4 py-2 border rounded-lg"
               />
             </div>
           )}
-          {loading && <div className="text-center text-xl">Зареждане...</div>}
+          {loading && <div className="text-center text-xl">Р—Р°СЂРµР¶РґР°РЅРµ...</div>}
         </div>
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
           <div className="grid grid-cols-2 lg:grid-cols-8 gap-6 mt-12">
